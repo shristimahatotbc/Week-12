@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function mOver()
+		{
+			document.getElementById("p1").innnerHTML = "Thank You";
+		}
+		function mOut()
+		{
+			document.getElementById("p1").innerHTML = "Mouse Over Me ";
+		}
+	</script>
+</head>
+<body>
+	<div id="p1" onmouseover="mOver()" onmouseout="mOut()"> Show the div </div>
+	<p id ="p1"></p>
+	<form>
+		<input type="text" ><br><br>Text<br>
+
+		<textarea rows="5" cols="21" onfocus="message('textarea')"></textarea><br><br>Option
+		<select onfocus="message('Select Option')"><br><br>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select><br><br>
+		<input type="button" onclick="callme()" value="Click here">
+	</form>
+</body>
+</html>	

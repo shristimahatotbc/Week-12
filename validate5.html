@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validate()
+		{
+			var name=v1.txtName.value;
+			if(name=="")
+			{
+				alert("User Name is required.");
+				f1.txtName.focus();
+				return false;
+			}
+			var password=v1.txtPassword.value;
+			if(password=="" || isNaN(password) || password.length!=8)
+			{
+				alert("Enter password.")
+				v1.txtPassword.focus();
+				return false;
+			}
+			var cpassword=v1.txtCpassword.value;
+			if(cpassword=="" || isNaN(cpassword) || cpassword.length!=8)
+			{
+				alert("Confim password required")
+				v1.txtCpassword.focus();
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="v1" onsubmit="return validate()">
+		<table cellpading="10px">
+			<tr>
+				<td>User Name:</td>
+				<td><input type="text" name="txtName">
+				</td>
+			<tr>
+				<td>Password:</td>
+				<td><input type="text" name="txtPassword">
+				</td>
+			</tr>
+			<tr>
+			    <td>Confirm Password:</td>
+			    <td><input type="text" name="txtCpassword">
+			    </td>
+			</tr> 
+			<tr>
+				<td><input type="submit" name="btnsubmit" value="Submit"></td>
+			</tr>	
+		</table>
+	</form>		   
+</body>
+</html>		
